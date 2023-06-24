@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block content %}
+login
+<form action="login" method="POST" autocomplete="off">
+    {% if messages %}
+    {% for message in messages %}
+    
+    {{message}}
+    {% endfor %}
+    
+    {% endif %}
+    {% csrf_token %}
+    
+    <button type="submit">Submit</button>
+
+</form>
+{% endblock %}
